@@ -1,1 +1,250 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><script>try{document.documentElement.dataset.theme=localStorage.getItem('theme')||(matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light');document.documentElement.dir=localStorage.getItem('layoutDirection')||'ltr'}catch(e){}</script><title>Create Account | Everleaf Organic Grocery</title><meta name="description" content="Create an Everleaf account for faster checkout and future subscription management."><link rel="canonical" href="https://example.com/register.html"><meta property="og:title" content="Create Account | Everleaf Organic Grocery"><meta property="og:description" content="Create an Everleaf account for faster checkout and future subscription management."><meta property="og:image" content="https://example.com/assets/images/hero-organic.png"><meta name="twitter:card" content="summary_large_image"><link rel="stylesheet" href="../assets/css/style.css"><link rel="stylesheet" href="../assets/css/dark-mode.css"><link rel="stylesheet" href="../assets/css/rtl.css"></head><body class="login-body register-body"><a class="skip-link" href="#register-form">Skip to registration form</a><div class="auth-tools"><button class="icon-btn theme-toggle" type="button"></button><button class="icon-btn direction-toggle" type="button"></button></div><main class="login-page"><section class="login-shell register-shell"><div class="login-content register-content"><a class="logo login-logo" href="index.html" aria-label="Everleaf Market home"><span class="logo-mark"><i data-lucide="sprout"></i></span><span class="logo-copy"><span class="logo-name">Everleaf Market</span><span class="logo-tagline">Organic · Local · Natural</span></span></a><div class="login-heading"><span class="eyebrow">Join Everleaf Market</span><h1>Create your account</h1><p>Create an account for faster checkout, saved delivery details and simple subscription management.</p></div><form class="login-form register-form" id="register-form" data-validate data-demo novalidate><div class="register-fields"><div class="field register-full"><label for="full-name">Full Name</label><input id="full-name" name="full-name" type="text" autocomplete="name" placeholder="Your full name" required aria-describedby="full-name-error"><span class="field-error" id="full-name-error">Please enter your full name.</span></div><div class="field"><label for="auth-email">Email Address</label><input id="auth-email" name="email" type="email" autocomplete="email" placeholder="you@example.com" required aria-describedby="register-email-error"><span class="field-error" id="register-email-error">Please enter a valid email address.</span></div><div class="field"><label for="phone">Phone Number</label><input id="phone" name="phone" type="tel" autocomplete="tel" placeholder="Your phone number" required aria-describedby="register-phone-error"><span class="field-error" id="register-phone-error">Please enter a valid phone number.</span></div><div class="field"><label for="password">Password</label><div class="password-field"><input id="password" name="password" type="password" minlength="8" autocomplete="new-password" placeholder="Create a password" required aria-describedby="register-password-error"><button type="button" class="password-toggle" data-target="password" aria-label="Show password"><i data-lucide="eye"></i></button></div><span class="field-error" id="register-password-error">Use at least eight characters.</span></div><div class="field"><label for="confirm-password">Confirm Password</label><div class="password-field"><input id="confirm-password" name="confirm-password" type="password" minlength="8" autocomplete="new-password" placeholder="Repeat your password" required aria-describedby="confirm-password-error"><button type="button" class="password-toggle" data-target="confirm-password" aria-label="Show password"><i data-lucide="eye"></i></button></div><span class="field-error" id="confirm-password-error">Please enter the same password.</span></div></div><div class="register-terms field"><label><input id="terms" name="terms" type="checkbox" required aria-describedby="terms-error"><span>I agree to the <a href="coming-soon.html">Terms &amp; Privacy Policy</a></span></label><span class="field-error" id="terms-error">You must accept the terms to continue.</span></div><button class="btn btn-primary login-submit" type="submit">Create Account</button><div class="social-divider"><span>Or continue with</span></div><div class="social-login"><button class="social-login-btn" type="button" aria-label="Continue with Google"><span class="google-mark">G</span><span>Google</span></button><button class="social-login-btn" type="button" aria-label="Continue with Apple"><i data-lucide="apple"></i><span>Apple</span></button></div></form><p class="login-register">Already have an account? <a href="login.html">Sign In</a></p><a class="login-back" href="index.html"><i data-lucide="arrow-left"></i> Back to home</a></div><aside class="login-visual register-visual" aria-label="Local growers standing in a grain field"><div class="login-visual-copy"><span class="eyebrow">Naturally simple shopping</span><h2>Your everyday organic shop, all in one account</h2><p>Save delivery details, manage subscriptions and return to your favourite wholesome foods.</p><div class="register-benefits"><span><i data-lucide="zap"></i> Faster checkout</span><span><i data-lucide="map-pin-check"></i> Saved delivery details</span><span><i data-lucide="package-check"></i> Easy subscription management</span></div></div></aside></section></main><div class="toast" role="status" aria-live="polite"></div><script src="../assets/js/lucide.min.js" defer></script><script src="../assets/js/main.js" defer></script></body></html>
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width,initial-scale=1" />
+        <script>
+            try {
+                document.documentElement.dataset.theme =
+                    localStorage.getItem("theme") ||
+                    (matchMedia("(prefers-color-scheme:dark)").matches ? "dark" : "light");
+                document.documentElement.dir = localStorage.getItem("layoutDirection") || "ltr";
+            } catch (e) {}
+        </script>
+        <title>Create Account | Everleaf Organic Grocery</title>
+        <meta
+            name="description"
+            content="Create an Everleaf account for faster checkout and future subscription management."
+        />
+        <link rel="canonical" href="https://example.com/register.html" />
+        <meta property="og:title" content="Create Account | Everleaf Organic Grocery" />
+        <meta
+            property="og:description"
+            content="Create an Everleaf account for faster checkout and future subscription management."
+        />
+        <meta property="og:image" content="https://example.com/assets/images/hero-organic.png" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <link rel="stylesheet" href="../assets/css/style.css" />
+        <link rel="stylesheet" href="../assets/css/dark-mode.css" />
+        <link rel="stylesheet" href="../assets/css/rtl.css" />
+    </head>
+    <body class="login-body register-body">
+        <a class="skip-link" href="#register-form">Skip to registration form</a>
+        <div class="auth-tools">
+            <button class="icon-btn theme-toggle" type="button"></button>
+            <button class="icon-btn direction-toggle" type="button"></button>
+        </div>
+        <main class="login-page">
+            <!-- =========================
+                 Login Shell Start
+            ========================= -->
+            <section class="login-shell register-shell">
+                <div class="login-content register-content">
+                    <a class="logo login-logo" href="index.html" aria-label="Everleaf Market home">
+                        <span class="logo-mark"><i data-lucide="sprout"></i></span>
+                        <span class="logo-copy">
+                            <span class="logo-name">Everleaf Market</span>
+                            <span class="logo-tagline">Organic | Local | Natural</span>
+                        </span>
+                    </a>
+                    <div class="login-heading">
+                        <span class="eyebrow">Join Everleaf Market</span>
+                        <h1>Create your account</h1>
+                        <p>
+                            Create an account for faster checkout, saved delivery details and simple
+                            subscription management.
+                        </p>
+                    </div>
+                    <form
+                        class="login-form register-form"
+                        id="register-form"
+                        data-validate
+                        data-demo
+                        novalidate
+                    >
+                        <div class="register-fields">
+                            <div class="field register-full">
+                                <label for="full-name">Full Name</label>
+                                <input
+                                    id="full-name"
+                                    name="full-name"
+                                    type="text"
+                                    autocomplete="name"
+                                    placeholder="Your full name"
+                                    required
+                                    aria-describedby="full-name-error"
+                                />
+                                <span class="field-error" id="full-name-error">
+                                    Please enter your full name.
+                                </span>
+                            </div>
+                            <div class="field">
+                                <label for="auth-email">Email Address</label>
+                                <input
+                                    id="auth-email"
+                                    name="email"
+                                    type="email"
+                                    autocomplete="email"
+                                    placeholder="you@example.com"
+                                    required
+                                    aria-describedby="register-email-error"
+                                />
+                                <span class="field-error" id="register-email-error">
+                                    Please enter a valid email address.
+                                </span>
+                            </div>
+                            <div class="field">
+                                <label for="phone">Phone Number</label>
+                                <input
+                                    id="phone"
+                                    name="phone"
+                                    type="tel"
+                                    autocomplete="tel"
+                                    placeholder="Your phone number"
+                                    required
+                                    aria-describedby="register-phone-error"
+                                />
+                                <span class="field-error" id="register-phone-error">
+                                    Please enter a valid phone number.
+                                </span>
+                            </div>
+                            <div class="field">
+                                <label for="password">Password</label>
+                                <div class="password-field">
+                                    <input
+                                        id="password"
+                                        name="password"
+                                        type="password"
+                                        minlength="8"
+                                        autocomplete="new-password"
+                                        placeholder="Create a password"
+                                        required
+                                        aria-describedby="register-password-error"
+                                    />
+                                    <button
+                                        type="button"
+                                        class="password-toggle"
+                                        data-target="password"
+                                        aria-label="Show password"
+                                    >
+                                        <i data-lucide="eye"></i>
+                                    </button>
+                                </div>
+                                <span class="field-error" id="register-password-error">
+                                    Use at least eight characters.
+                                </span>
+                            </div>
+                            <div class="field">
+                                <label for="confirm-password">Confirm Password</label>
+                                <div class="password-field">
+                                    <input
+                                        id="confirm-password"
+                                        name="confirm-password"
+                                        type="password"
+                                        minlength="8"
+                                        autocomplete="new-password"
+                                        placeholder="Repeat your password"
+                                        required
+                                        aria-describedby="confirm-password-error"
+                                    />
+                                    <button
+                                        type="button"
+                                        class="password-toggle"
+                                        data-target="confirm-password"
+                                        aria-label="Show password"
+                                    >
+                                        <i data-lucide="eye"></i>
+                                    </button>
+                                </div>
+                                <span class="field-error" id="confirm-password-error">
+                                    Please enter the same password.
+                                </span>
+                            </div>
+                        </div>
+                        <div class="register-terms field">
+                            <label>
+                                <input
+                                    id="terms"
+                                    name="terms"
+                                    type="checkbox"
+                                    required
+                                    aria-describedby="terms-error"
+                                />
+                                <span>
+                                    I agree to the
+                                    <a href="coming-soon.html">Terms &amp; Privacy Policy</a>
+                                </span>
+                            </label>
+                            <span class="field-error" id="terms-error">
+                                You must accept the terms to continue.
+                            </span>
+                        </div>
+                        <button class="btn btn-primary login-submit" type="submit">
+                            Create Account
+                        </button>
+                        <div class="social-divider"><span>Or continue with</span></div>
+                        <div class="social-login">
+                            <button
+                                class="social-login-btn"
+                                type="button"
+                                aria-label="Continue with Google"
+                            >
+                                <span class="google-mark">G</span>
+                                <span>Google</span>
+                            </button>
+                            <button
+                                class="social-login-btn"
+                                type="button"
+                                aria-label="Continue with Apple"
+                            >
+                                <i data-lucide="apple"></i>
+                                <span>Apple</span>
+                            </button>
+                        </div>
+                    </form>
+                    <p class="login-register">
+                        Already have an account?
+                        <a href="login.html">Sign In</a>
+                    </p>
+                    <a class="login-back" href="index.html">
+                        <i data-lucide="arrow-left"></i>
+                        Back to home
+                    </a>
+                </div>
+                <aside
+                    class="login-visual register-visual"
+                    aria-label="Local growers standing in a grain field"
+                >
+                    <div class="login-visual-copy">
+                        <span class="eyebrow">Naturally simple shopping</span>
+                        <h2>Your everyday organic shop, all in one account</h2>
+                        <p>
+                            Save delivery details, manage subscriptions and return to your favourite
+                            wholesome foods.
+                        </p>
+                        <div class="register-benefits">
+                            <span>
+                                <i data-lucide="zap"></i>
+                                Faster checkout
+                            </span>
+                            <span>
+                                <i data-lucide="map-pin-check"></i>
+                                Saved delivery details
+                            </span>
+                            <span>
+                                <i data-lucide="package-check"></i>
+                                Easy subscription management
+                            </span>
+                        </div>
+                    </div>
+                </aside>
+            </section>
+            <!-- =========================
+                 Login Shell End
+            ========================= -->
+        </main>
+        <div class="toast" role="status" aria-live="polite"></div>
+        <script src="../assets/js/lucide.min.js" defer></script>
+        <script src="../assets/js/main.js" defer></script>
+    </body>
+</html>

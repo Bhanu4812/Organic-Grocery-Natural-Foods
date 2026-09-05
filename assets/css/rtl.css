@@ -1,1 +1,26 @@
-[dir="rtl"] .nav-list,[dir="rtl"] .nav-actions,[dir="rtl"] .meta,[dir="rtl"] .actions,[dir="rtl"] .socials{flex-direction:row-reverse}[dir="rtl"] .hero-grid,[dir="rtl"] .split{direction:rtl}[dir="rtl"] .hero-grid>*,[dir="rtl"] .split>*{direction:rtl}[dir="rtl"] .feature-list li{padding-inline-start:0;padding-inline-end:26px}[dir="rtl"] .feature-list li::before{inset-inline-start:auto;inset-inline-end:0}[dir="rtl"] .accordion-button{text-align:right}
+[dir="rtl"] .nav-list,
+[dir="rtl"] .nav-actions,
+[dir="rtl"] .meta,
+[dir="rtl"] .actions,
+[dir="rtl"] .socials {
+    flex-direction: row-reverse;
+}
+[dir="rtl"] .hero-grid,
+[dir="rtl"] .split {
+    direction: rtl;
+}
+[dir="rtl"] .hero-grid > *,
+[dir="rtl"] .split > * {
+    direction: rtl;
+}
+[dir="rtl"] .feature-list li {
+    padding-inline-start: 0;
+    padding-inline-end: 26px;
+}
+[dir="rtl"] .feature-list li::before {
+    inset-inline-start: auto;
+    inset-inline-end: 0;
+}
+[dir="rtl"] .accordion-button {
+    text-align: right;
+}
