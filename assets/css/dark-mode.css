@@ -1,0 +1,10 @@
+[data-theme="dark"]{--bg:#152019;--surface:#1d2b22;--surface-alt:#24372a;--text:#f2f2e8;--muted:#bdc8bd;--border:#3a4d40;--primary:#79b783;--primary-dark:#579765;--accent:#d29a58;--shadow:0 12px 32px rgba(0,0,0,.24)}[data-theme="dark"] .site-header{background:rgba(21,32,25,.96)}[data-theme="dark"] .site-footer{background:#0f1812}[data-theme="dark"] .product-image{background:#293a2d}[data-theme="dark"] .auth-art{filter:saturate(.85) brightness(.75)}
+[data-theme="dark"] .team-card,[data-theme="dark"] .testimonial-card{background:var(--surface);border-color:var(--border)}
+[data-theme="dark"] .testimonial-person{border-color:var(--border)}
+[data-theme="dark"] .logo-name{color:#f3f5ee}
+[data-theme="dark"] .site-header{border-color:var(--border)}
+[data-theme="dark"] .main-nav,[data-theme="dark"] .dropdown{background:var(--surface);border-color:var(--border)}
+[data-theme="dark"] .nav-link{color:#d9e2d9}
+[data-theme="dark"] .nav-link.active,[data-theme="dark"] .nav-link:hover{color:var(--primary)}
+[data-theme="dark"] .icon-btn{color:#edf2eb}
+[data-theme="dark"] .icon-btn:hover{background:var(--surface-alt)}
