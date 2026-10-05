@@ -4036,3 +4036,34 @@ a:focus-visible, button:focus-visible {
         display: none;
     }
 }
+
+/* Share text rows so wrapped About headings keep descriptions aligned. */
+.about-values > .story-card {
+    display: grid;
+    grid-row: span 4;
+    grid-template-rows: subgrid;
+    row-gap: 0;
+}
+.about-values > .story-card > .card-body {
+    display: grid;
+    grid-row: span 3;
+    grid-template-rows: subgrid;
+    row-gap: 12px;
+}
+.about-values .card-body > .btn {
+    margin-block-start: 0;
+    justify-self: start;
+    align-self: end;
+}
+.about-journey > .step {
+    display: grid;
+    grid-row: span 3;
+    grid-template-rows: subgrid;
+    row-gap: 12px;
+    align-content: start;
+}
+.about-journey > .step > h3,
+.about-journey > .step > p,
+.about-journey > .step::before {
+    margin-block: 0;
+}
