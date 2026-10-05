@@ -10,6 +10,22 @@
     // Theme and RTL Controls
     // ========================================
 
+    const selectedPlan = new URLSearchParams(location.search).get("plan");
+    if (["Essential Organic Box", "Family Harvest Box", "Healthy Pantry Box"].includes(selectedPlan)) {
+        const enquiry = $(".contact-form #type");
+        const message = $(".contact-form #message");
+        if (enquiry) enquiry.value = "Subscription";
+        if (message && !message.value) message.value = `I would like to learn more about the ${selectedPlan}.`;
+    }
+
+    const selectedFarm = new URLSearchParams(location.search).get("farm");
+    if (["Willow Creek Organics", "Meadow Sun Dairy", "Three Oaks Farm"].includes(selectedFarm)) {
+        const enquiry = $(".contact-form #type");
+        const message = $(".contact-form #message");
+        if (enquiry) enquiry.value = "Product Availability";
+        if (message && !message.value) message.value = `I would like to ask about produce from ${selectedFarm}.`;
+    }
+
     const storedTheme = localStorage.getItem("theme");
     const systemTheme = matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
     root.dataset.theme = storedTheme || systemTheme;
@@ -27,7 +43,9 @@
         });
         $$(".direction-toggle").forEach((button) => {
             const rtl = root.dir === "rtl";
-            button.innerHTML = '<i data-lucide="languages"></i>';
+            // A rounded text-flow tile with an arrow toward the target direction.
+            button.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="2.5" y="2.5" width="19" height="19" rx="4"/><g${rtl ? ' transform="translate(24 0) scale(-1 1)"' : ""}><path d="M7 7.5h10M10 11h7M17 16.5H7m3-3-3 3 3 3"/></g></svg>`;
+            button.setAttribute("aria-pressed", String(rtl));
             button.setAttribute("aria-label", rtl ? "Switch to LTR" : "Switch to RTL");
             button.title = button.getAttribute("aria-label");
         });
@@ -430,6 +448,31 @@
         );
     filter(".product-filter", "category");
     filter(".blog-filter", "blogCategory");
+    const productCategoryControl = $(".product-filter");
+    const syncProductCategories = () => {
+        if (!productCategoryControl) return;
+        $$("[data-product-category]").forEach((link) => {
+            const active = link.dataset.productCategory === productCategoryControl.value;
+            link.classList.toggle("btn-primary", active);
+            link.classList.toggle("btn-outline", !active);
+            if (active) link.setAttribute("aria-current", "true");
+            else link.removeAttribute("aria-current");
+        });
+        const count = $(".product-count");
+        if (count) {
+            const visible = $$(".product-grid [data-category]").filter((card) => !card.hidden).length;
+            count.textContent = `${visible} ${visible === 1 ? "product" : "products"}`;
+        }
+    };
+    $$("[data-product-category]").forEach((link) => {
+        link.addEventListener("click", () => {
+            if (!productCategoryControl) return;
+            productCategoryControl.value = link.dataset.productCategory;
+            productCategoryControl.dispatchEvent(new Event("change", { bubbles: true }));
+        });
+    });
+    productCategoryControl?.addEventListener("change", syncProductCategories);
+    syncProductCategories();
     // ========================================
     // Section Reveal Animations
     // ========================================

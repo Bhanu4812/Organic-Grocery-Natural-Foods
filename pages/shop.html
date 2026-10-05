@@ -12,6 +12,8 @@
             } catch (e) {}
         </script>
         <title>Shop Organic Food | Everleaf Market</title>
+        <link rel="icon" href="../favicon.ico" sizes="16x16 32x32 48x48" />
+        <link rel="icon" type="image/svg+xml" href="../assets/images/favicon.svg" sizes="any" />
         <meta
             name="description"
             content="Browse organic vegetables, dairy, grains, snacks and superfoods with simple filters, transparent product details and fresh local delivery."
@@ -71,7 +73,7 @@
                         <li><a class="nav-link" href="blog.html">Blog</a></li>
                         <li><a class="nav-link" href="contact.html">Contact</a></li>
                         <li class="mobile-extra">
-                            <a class="nav-link" href="login.html">Login</a>
+                            <a class="btn btn-primary" href="login.html">Login</a>
                         </li>
                         <li class="mobile-extra">
                             <button
@@ -82,7 +84,7 @@
                             </button>
                         </li>
                         <li class="mobile-extra">
-                            <a class="btn btn-primary" href="shop.html">Shop Now</a>
+                            <a class="btn btn-outline" href="shop.html">Shop Now</a>
                         </li>
                     </ul>
                 </nav>
@@ -101,8 +103,8 @@
                     </a>
                     <button class="icon-btn theme-toggle" type="button"></button>
                     <button class="icon-btn direction-toggle" type="button"></button>
-                    <a class="nav-link desktop-login" href="login.html">Login</a>
-                    <a class="btn btn-primary" href="shop.html">Shop Now</a>
+                    <a class="btn btn-primary desktop-login" href="login.html">Login</a>
+                    <a class="btn btn-outline" href="shop.html">Shop Now</a>
                 </div>
             </div>
         </header>
@@ -148,7 +150,7 @@
                         <option>Price: low to high</option>
                         <option>Newest</option>
                     </select>
-                    <span>12 products</span>
+                    <span class="product-count" aria-live="polite">12 products</span>
                 </div>
             </section>
             <!-- =========================
@@ -160,12 +162,12 @@
             <section class="section-sm alt">
                 <div class="container">
                     <div class="actions" aria-label="Category shortcuts">
-                        <a class="btn btn-outline" href="#products">All</a>
-                        <a class="btn btn-outline" href="#products">Vegetables</a>
-                        <a class="btn btn-outline" href="#products">Dairy</a>
-                        <a class="btn btn-outline" href="#products">Pulses</a>
-                        <a class="btn btn-outline" href="#products">Snacks</a>
-                        <a class="btn btn-outline" href="#products">Superfoods</a>
+                        <a class="btn btn-outline" href="#products" data-product-category="all">All</a>
+                        <a class="btn btn-outline" href="#products" data-product-category="Vegetables">Vegetables</a>
+                        <a class="btn btn-outline" href="#products" data-product-category="Dairy">Dairy</a>
+                        <a class="btn btn-outline" href="#products" data-product-category="Pulses">Pulses</a>
+                        <a class="btn btn-outline" href="#products" data-product-category="Snacks">Snacks</a>
+                        <a class="btn btn-outline" href="#products" data-product-category="Superfoods">Superfoods</a>
                     </div>
                 </div>
             </section>

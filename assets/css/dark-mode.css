@@ -54,3 +54,24 @@
 [data-theme="dark"] .icon-btn:hover {
     background: var(--surface-alt);
 }
+
+[data-theme="dark"] .wish {
+    color: #fff;
+}
+
+[data-theme="dark"] .btn-primary {
+    color: #152019;
+}
+[data-theme="dark"] .btn-primary:hover {
+    background: #79b783;
+}
+[data-theme="dark"] .about-basket-cta .btn-primary {
+    color: #214e2b;
+}
+[data-theme="dark"] .about-basket-cta .btn-primary:hover {
+    background: #dce9cf;
+}
+
+[data-theme="dark"] .contact-form input[type="date"] {
+    color-scheme: dark;
+}

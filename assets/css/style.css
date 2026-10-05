@@ -3693,3 +3693,346 @@ select option:hover {
         transition: none;
     }
 }
+
+/* Header utility alignment and CTA hierarchy */
+.nav-actions > .icon-btn {
+    flex-shrink: 0;
+    padding: 0;
+}
+.nav-actions > .icon-btn svg,
+.mobile-direction svg {
+    display: block;
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;
+    stroke-width: 1.8;
+}
+.nav-actions > .btn {
+    min-height: 46px;
+    white-space: nowrap;
+}
+@media (max-width: 1180px) {
+    .main-nav .mobile-extra .btn-outline {
+        background: transparent;
+        color: var(--primary);
+        border-color: var(--primary);
+    }
+}
+
+/* Home Page 2: balanced hero with centered copy and a compact image */
+.living-hero-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    align-items: center;
+    gap: clamp(28px, 4vw, 56px);
+    max-width: 1080px;
+    margin-inline: auto;
+}
+.living-hero-grid > :first-child {
+    text-align: center;
+    max-width: 500px;
+    justify-self: center;
+}
+.living-hero h1 {
+    font-size: clamp(2.25rem, 3.6vw, 3.2rem);
+    line-height: 1.12;
+    text-wrap: balance;
+}
+.living-hero p {
+    max-width: 40ch;
+    margin-inline: auto;
+}
+.living-hero .actions {
+    justify-content: center;
+    margin-block-start: 24px;
+}
+.living-hero-visual {
+    width: 100%;
+    max-width: 480px;
+    justify-self: center;
+}
+.living-hero .hero-image {
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+}
+@media (max-width: 900px) {
+    .living-hero-grid {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 32px;
+    }
+}
+
+/* About page: a distinct, high-contrast basket CTA panel in both themes */
+.about-basket-cta {
+    padding: clamp(32px, 5vw, 60px) clamp(20px, 4vw, 48px);
+    border: 1px solid #42674a;
+    border-radius: 20px;
+    background: radial-gradient(ellipse at top right, #42674a 0%, transparent 65%), #214e2b;
+    color: #fff;
+}
+.about-basket-cta h2 {
+    color: #fff;
+    text-wrap: balance;
+    margin-block-end: 24px;
+}
+.about-basket-cta .btn-primary {
+    background: #f1f5e9;
+    color: #214e2b;
+    border-color: #f1f5e9;
+}
+.about-basket-cta .btn-primary:hover {
+    background: #dce9cf;
+    border-color: #dce9cf;
+}
+.about-basket-cta .btn:focus-visible {
+    outline: 2px solid #fff;
+    outline-offset: 4px;
+}
+
+/* Keep category-filtered cards hidden despite their flex layout. */
+.product-card[hidden] {
+    display: none;
+}
+/* Center wishlist artwork within its circular control. */
+.wish {
+    display: grid;
+    place-items: center;
+    padding: 0;
+    color: var(--text);
+}
+.wish svg {
+    display: block;
+}
+
+/* Home standards: consistent heading space aligns descriptions across cards. */
+.standards-grid > .card {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 18px;
+    text-align: start;
+}
+.standards-grid .icon-box {
+    flex-shrink: 0;
+}
+.standards-grid h3 {
+    min-height: 2.4em;
+    line-height: 1.2;
+    margin: 0;
+}
+.standards-grid p {
+    margin: 0;
+}
+/* Home Page 2 journal: a featured story with a comfortably sized companion. */
+.grid-3.living-journal {
+    grid-template-columns: minmax(0, 1.35fr) minmax(0, 1fr);
+    gap: 28px;
+}
+.living-journal .blog-card img {
+    height: 280px;
+}
+.living-journal > div .blog-card h3 {
+    font-size: clamp(1.5rem, 2.2vw, 1.9rem);
+    text-wrap: balance;
+}
+.living-journal .card-body {
+    min-width: 0;
+    overflow-wrap: anywhere;
+}
+/* CTA panels and secondary buttons use stable, readable colors in both themes. */
+.newsletter,
+.contact-cta {
+    background: #214e2b;
+    color: #fff;
+}
+.btn-secondary {
+    color: #152019;
+}
+.newsletter .btn-secondary,
+.contact-cta .btn-secondary {
+    background: #f1f5e9;
+    border-color: #f1f5e9;
+    color: #214e2b;
+}
+.newsletter .btn-secondary:hover,
+.contact-cta .btn-secondary:hover {
+    background: #dce9cf;
+    border-color: #dce9cf;
+    color: #214e2b;
+}
+@media (max-width: 620px) {
+    .grid-3.living-journal {
+        grid-template-columns: minmax(0, 1fr);
+    }
+    .living-journal .blog-card img {
+        height: 220px;
+    }
+    .standards-grid h3 {
+        min-height: 0;
+    }
+}
+
+/* Match the native calendar icon and picker to the Contact form theme. */
+.contact-form input[type="date"] {
+    color-scheme: light;
+}
+
+/* Keep every header utility available on narrow phones. */
+@media (max-width: 620px) {
+    .site-header .nav-actions .search-toggle,
+    .site-header .nav-actions > .direction-toggle {
+        display: grid;
+    }
+    .site-header .nav-wrap {
+        gap: 6px;
+    }
+    .site-header .logo {
+        gap: 6px;
+        min-width: 0;
+    }
+    .site-header .logo-name {
+        font-size: 0.875rem;
+    }
+    .site-header .nav-actions {
+        gap: 2px;
+        flex-shrink: 0;
+    }
+    .site-header .nav-actions .icon-btn,
+    .site-header .menu-toggle {
+        width: 36px;
+        height: 42px;
+        flex-shrink: 0;
+    }
+}
+@media (max-width: 400px) {
+    .site-header .container {
+        width: calc(100% - 24px);
+    }
+    .site-header .nav-wrap {
+        gap: 4px;
+    }
+    .site-header .logo-mark {
+        width: 32px;
+        height: 32px;
+    }
+    .site-header .logo-name {
+        font-size: 0.8125rem;
+    }
+    .site-header .nav-actions .icon-btn,
+    .site-header .menu-toggle {
+        width: 34px;
+    }
+}
+
+/* Image-led cards share proportions and keep their action at the bottom. */
+.story-card, .blog-card, .farm-card, .product-card, .plan-card {
+    min-width: 0;
+}
+.story-card, .blog-card:not(.split), .farm-card {
+    display: flex;
+    flex-direction: column;
+}
+.story-card-image, .farm-card > img, .blog-card:not(.split) > img {
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+}
+.story-card .card-body, .blog-card:not(.split) .card-body, .farm-card .card-body {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    gap: 12px;
+    min-width: 0;
+}
+.story-card .card-body > *, .blog-card .card-body > h3, .farm-card .card-body > h3 {
+    margin-block: 0;
+}
+.story-card .card-body > .btn, .blog-card .card-body > .btn, .farm-card .card-body > .btn {
+    margin-block-start: auto;
+    align-self: flex-start;
+}
+.plan-card .card-body > .btn {
+    align-self: stretch;
+}
+.card h3, .card p, .card .btn {
+    overflow-wrap: break-word;
+}
+.card .meta, .card .actions {
+    flex-wrap: wrap;
+}
+.card:focus-within {
+    box-shadow: var(--shadow);
+    border-color: var(--primary);
+}
+a:focus-visible, button:focus-visible {
+    outline: 2px solid var(--primary);
+    outline-offset: 3px;
+}
+.blog-card[hidden] {
+    display: none;
+}
+.journal-article {
+    max-width: 800px;
+}
+.journal-article > img {
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    border-radius: 18px;
+    margin-block-end: 32px;
+}
+.article-intro {
+    font-size: 1.15rem;
+}
+#contact-form, #products, #willow-creek-story {
+    scroll-margin-block-start: calc(var(--header) + 24px);
+}
+@media (min-width: 621px) and (max-width: 1024px) {
+    .grid-3:has(> .story-card), .grid-4:has(> .story-card),
+    .grid-3:has(> .farm-card), .grid-3:has(> .blog-card) {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+@media (max-width: 620px) {
+    .grid-3:has(> .story-card), .grid-4:has(> .story-card),
+    .grid-3:has(> .farm-card), .grid-3:has(> .blog-card) {
+        grid-template-columns: minmax(0, 1fr);
+    }
+    .grid-3.living-journal {
+        grid-template-columns: minmax(0, 1fr);
+    }
+    .card-body {
+        padding: 20px;
+    }
+    .product-card .card-body {
+        padding: 14px;
+    }
+}
+@media (hover: hover) and (prefers-reduced-motion: no-preference) {
+    .story-card:hover, .blog-card:hover, .farm-card:hover {
+        transform: translateY(-3px);
+    }
+}
+@media (prefers-reduced-motion: reduce) {
+    .card, .card img, .btn {
+        transition: none;
+    }
+    .card:hover, .btn:hover, .product-card:hover img {
+        transform: none;
+    }
+}
+@media (max-width: 620px) {
+    .site-header .logo > .logo-copy {
+        display: flex;
+    }
+    .site-header .logo .logo-tagline {
+        display: none;
+    }
+}
