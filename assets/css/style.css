@@ -82,6 +82,35 @@ h1 {
 h2 {
     font-size: clamp(1.85rem, 3.5vw, 2.45rem);
 }
+main section h2 {
+    text-align: center;
+}
+/* Keep section labels, introductions and calls to action aligned with their titles. */
+main section div:has(> h2) > :is(.eyebrow, .category, p),
+main section .section-head ~ p {
+    text-align: center;
+}
+main section div:has(> h2) > .eyebrow {
+    display: block;
+}
+main section div:has(> h2) > .category {
+    display: table;
+    margin-inline: auto;
+}
+main section div:has(> h2, > .section-head) > .btn {
+    display: flex;
+    width: fit-content;
+    margin-inline: auto;
+}
+main section div:has(> h2) > :is(.meta, .actions) {
+    justify-content: center;
+}
+main section div:has(> h2, > .section-head) > .feature-list {
+    width: fit-content;
+    max-width: 100%;
+    margin-inline: auto;
+    text-align: start;
+}
 h3 {
     font-size: clamp(1.25rem, 2vw, 1.55rem);
 }
@@ -97,6 +126,8 @@ h4 {
 }
 .section-head {
     max-width: 680px;
+    margin-inline: auto;
+    text-align: center;
     margin-block-end: 40px;
 }
 .section-head.center {
@@ -1720,6 +1751,8 @@ h4 {
     grid-column: 2;
 }
 .contact-submit {
+    display: flex;
+    margin-inline: auto;
     margin-block-start: 24px;
 }
 .contact-submit svg,
@@ -1951,7 +1984,7 @@ h4 {
         height: 380px;
     }
     .contact-section-head {
-        text-align: start;
+        text-align: center;
     }
     .contact-cta-section {
         padding-block: 52px;
@@ -3285,12 +3318,7 @@ select option:hover {
 }
 #seasonal .section-head {
     max-width: none;
-    display: grid;
-    grid-template-columns: minmax(0, 1fr) minmax(320px, 480px);
-    grid-template-rows: auto auto;
-    align-items: end;
-    column-gap: 56px;
-    row-gap: 8px;
+    display: block;
     margin-block-end: 32px;
     padding-block-end: 24px;
     border-block-end: 1px solid var(--border);
@@ -3302,14 +3330,16 @@ select option:hover {
 #seasonal .section-head h2 {
     grid-column: 1;
     grid-row: 2;
-    margin: 0;
+    margin: 8px 0;
     font-size: clamp(2.15rem, 3.2vw, 2.8rem);
 }
 #seasonal .section-head p {
     grid-column: 2;
     grid-row: 1 / span 2;
     align-self: end;
-    margin: 0;
+    max-width: 680px;
+    margin-inline: auto;
+    margin-block: 0;
     font-size: 1.05rem;
     line-height: 1.65;
 }
@@ -3955,6 +3985,12 @@ select option:hover {
 .story-card .card-body > .btn, .blog-card .card-body > .btn, .farm-card .card-body > .btn {
     margin-block-start: auto;
     align-self: flex-start;
+}
+.living-journal .card-body > .meta {
+    margin-block-start: auto;
+}
+.living-journal .card-body > .btn-link {
+    margin-block-start: 0;
 }
 .plan-card .card-body > .btn {
     align-self: stretch;
