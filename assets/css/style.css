@@ -3986,11 +3986,15 @@ select option:hover {
     margin-block-start: auto;
     align-self: flex-start;
 }
-.living-journal .card-body > .meta {
+.living-journal .journal-card-footer {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
     margin-block-start: auto;
 }
-.living-journal .card-body > .btn-link {
+.living-journal .journal-card-footer > .btn-link {
     margin-block-start: 0;
+    align-self: flex-start;
 }
 .plan-card .card-body > .btn {
     align-self: stretch;
